@@ -13,7 +13,7 @@ export default function Hero() {
           </h1>
           <p className="max-w-[400px] text-gray-200 md:text-[1.2rem]">
             Experience natural, lifelike audio and exceptional build quality
-            made for the passionted music enthsiast.
+            made for the passionte music enthsiast.
           </p>
           <button className="mt-4 bg-[#D87D4A] px-6 py-3 hover:bg-[#dd8f62] ease-in-out duration-300 text-[0.9rem] font-bold text-white">
             SEE PRODUCT
