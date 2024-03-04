@@ -15,7 +15,7 @@ export default function Navbar() {
   }
  
   return (
-    <div className="flex h-[90px] items-center justify-center bg-black text-white ">
+    <div className="flex h-[90px] items-center justify-center bg-black text-white">
       <nav className="flex w-[80%] max-w-[1110px] items-center justify-between py-7 md:border-b-[1px] ">
         <FaBars size={25} className="md:hidden cursor-pointer" onClick={handleClick} />
         <Link to="/"><img src={logo} alt="The logo of the image" /></Link>
