@@ -1,5 +1,5 @@
 import React from "react";
-import ZX7 from "../assets/images/ZX7.png";
+import ZX7 from "../assets/images/ZX7.jpeg";
 import {motion} from "framer-motion"
 const fadeInAnimationVariants2 = {
   initial:{

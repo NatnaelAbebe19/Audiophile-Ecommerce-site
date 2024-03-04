@@ -5,7 +5,6 @@ import {
   AiOutlineTwitter,
   AiOutlineInstagram,
 } from "react-icons/ai";
-import {} from "react-icons/ai";
 
 export default function Footer() {
   return (
@@ -14,7 +13,7 @@ export default function Footer() {
         <div className="mx-auto">
           <img
             src={audiophile}
-            alt=""
+            alt="the logo of the image"
             className="border-spacing-8 border-t-4 border-t-[#D87D4A] px-4 py-8"
           />
         </div>

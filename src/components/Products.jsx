@@ -1,7 +1,7 @@
 import React from "react";
 import {motion} from "framer-motion"
 
-import Speaker from "../assets/images/image-removebg-preview(38).png";
+import Speaker from "../assets/images/ZX9big.png";
 const fadeInAnimationVariants2 = {
   initial:{
     opacity: 0,

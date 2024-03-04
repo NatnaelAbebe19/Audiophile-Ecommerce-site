@@ -53,7 +53,7 @@ export default function Hero() {
                 <img
                   src={BigHeadset}
                   alt="The bigest headset ever in the pagge"
-                  className="mx-auto mb-[4rem] h-[70vh] md:mx-0 md:w-[100%]"
+                  className="mx-auto mb-[4rem] h-[80vh] md:mx-0 md:w-[100%]"
                 />
         </motion.div>
       </div>
