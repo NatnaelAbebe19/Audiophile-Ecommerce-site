@@ -1,13 +1,33 @@
 import React from "react";
 import Datas from "./datas/devices";
 import { MdKeyboardArrowRight } from "react-icons/md";
+import {motion, useInView, useAnimation} from "framer-motion"
+
+const fadeInAnimationVariants = {
+  initial:{
+    opacity: 0,
+    y: 200
+  }, 
+  animate: (index)=>({
+    opacity: 1, 
+    y: 0,
+    transition: {delay: 0.05 * index, duration: 0.35}
+  })
+}
 
 
 export default function SingleDevices() {
   return (
     <div className="mx-auto mt-[5rem] flex w-full max-w-[1110px] flex-col md:mt-[7rem] md:flex-row">
-      {Datas.map((Data) => (
-        <div className="mx-auto mb-16 flex h-[165px] w-[327px] flex-col items-center rounded-lg bg-[#f2f2f2]">
+      {Datas.map((Data, index) => (
+        <motion.div 
+        className="mx-auto mb-16 flex h-[165px] w-[327px] flex-col items-center rounded-lg bg-[#f2f2f2]"
+        variants={fadeInAnimationVariants}
+        initial="initial"
+        whileInView="animate"
+        custom={index}
+        viewport={{once: true}}
+>
           <img
             src={Data.imag}
             alt="the combined it siyes"
@@ -20,7 +40,7 @@ export default function SingleDevices() {
               <MdKeyboardArrowRight />
             </span>
           </h2>
-        </div>
+        </motion.div>
       ))}
     </div>
   );

@@ -21,10 +21,10 @@ export default function Navbar() {
         <Link to="/"><img src={logo} alt="The logo of the image" /></Link>
         <div>
           <ul className="hidden justify-between md:flex md:w-[320px] lg:w-[430px]">
-            <NavLink to="/" className="text-[13px] font-bold uppercase cursor-pointer">Home</NavLink>
-            <NavLink to="/headphone" className="text-[13px] font-bold uppercase cursor-pointer">Headphones</NavLink>
-            <NavLink to="/speakers" className="text-[13px] font-bold uppercase cursor-pointer">speakers</NavLink>
-            <NavLink to="/earphones" className="text-[13px] font-bold uppercase cursor-pointer">earphones</NavLink>
+            <NavLink to="/" className="text-[13px] font-bold uppercase cursor-pointer hover:text-[#D87D4A] active:text-[#D87D4A] ease-in-out duration-300">Home</NavLink>
+            <NavLink to="/headphone" className="text-[13px] font-bold uppercase cursor-pointer hover:text-[#D87D4A] active:text-[#D87D4A] ease-in-out duration-300">Headphones</NavLink>
+            <NavLink to="/speakers" className="text-[13px] font-bold uppercase cursor-pointer hover:text-[#D87D4A] active:text-[#D87D4A] ease-in-out duration-300">speakers</NavLink>
+            <NavLink to="/earphones" className="text-[13px] font-bold uppercase cursor- hover:text-[#D87D4A] active:text-[#D87D4A] ease-in-out duration-300pointer">earphones</NavLink>
           </ul>
         </div>
         <AiOutlineShoppingCart size={30} />

@@ -1,9 +1,26 @@
 import React from "react";
 import YX1 from "../assets/images/YX1.jpg";
+import {motion} from "framer-motion"
+
+const varianted = {
+  initial:{
+    opacity: 0,
+    x: -100
+  },
+  animate:{
+    opacity: 1,
+    x: 0,
+    transition: {delay: 0.15, duration: .35}
+  }
+}
 
 export default function Product3() {
   return (
-    <div className="mx-auto mb-[6rem] flex w-[90%] max-w-[1110px] flex-col gap-8 md:flex-row md:gap-4">
+    <motion.div 
+    variants={varianted}
+    initial="initial"
+    whileInView={"animate"}
+    className="mx-auto mb-[6rem] flex w-[90%] max-w-[1110px] flex-col gap-8 md:flex-row md:gap-4">
       <div className="h-[250px] w-[100%] md:w-[50%]">
         <img
           src={YX1}
@@ -17,6 +34,6 @@ export default function Product3() {
           SEE PRODUCT
         </button>
       </div>
-    </div>
+    </motion.div>
   );
 }

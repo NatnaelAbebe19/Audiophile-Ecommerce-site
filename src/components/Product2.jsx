@@ -1,9 +1,24 @@
 import React from "react";
 import ZX7 from "../assets/images/ZX7.png";
-
+import {motion} from "framer-motion"
+const fadeInAnimationVariants2 = {
+  initial:{
+    opacity: 0,
+    x: 150
+  }, 
+  animate: {
+    opacity: 1, 
+    x: 0,
+    transition: {delay: 0.10, duration: 0.35}
+  }
+}
 export default function Product2() {
   return (
-    <div className="relative mx-auto mb-12 w-[90%] max-w-[1110px] overflow-hidden rounded-lg">
+    <motion.div 
+      variants={fadeInAnimationVariants2}
+      initial="initial"
+      whileInView='animate' 
+    className="relative mx-auto mb-12 w-[90%] max-w-[1110px] overflow-hidden rounded-lg">
       <div className="jsutify-center absolute left-4 top-[33%] flex flex-col items-center md:left-[10%]">
         <h1 className="fonts-bold text-2xl text-black md:text-3xl">
           ZX7 Speaker
@@ -19,6 +34,6 @@ export default function Product2() {
           className="h-[100%] w-[100%] rounded-lg"
         />
       </div>
-    </div>
+    </motion.div>
   );
 }
