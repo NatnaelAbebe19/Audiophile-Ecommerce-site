@@ -1,7 +1,7 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import {motion, useInView, useAnimation} from "framer-motion"
 import BigHeadset from "../assets/images/Bitmap.png";
-
+import FadeLoader from "react-spinners/FadeLoader"; 
 const fadeInAnimationVariants = {
   initial:{
     opacity: 0,
@@ -25,8 +25,26 @@ const fadeInAnimationVariants2 = {
   }
 }
 export default function Hero() {
+  const [loading, setLoading] = useState(false);
+
+  useEffect(()=>{
+    setLoading(true);
+    setTimeout(()=>{
+      setLoading(false);
+    }, 1700)
+  }, [])
+  
+
+
   return (
     <div className="mx-auto mb-8  flex flex-col items-center overflow-hidden bg-[#131313]">
+      {loading? <div className="h-[90vh] flex justify-center items-center">
+        <FadeLoader
+          color={"#D87D4A"}
+          loading={loading}
+          size={30}
+        />
+      </div>:
       <div className=" flex max-w-[1110px] items-center justify-center md:w-[80%] ">
         <motion.div 
         variants={fadeInAnimationVariants2}
@@ -56,7 +74,7 @@ export default function Hero() {
                   className="mx-auto mb-[4rem] h-[80vh] md:mx-0 md:w-[100%]"
                 />
         </motion.div>
-      </div>
+      </div>}
     </div>
   );
 }
