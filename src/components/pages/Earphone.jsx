@@ -38,7 +38,7 @@ export default function Earphone() {
     }, [])
   return (
     <div><div>
-    <h1 className="py-12 w-full bg-black text-white mb-8 text-4xl font-bold text-center ">EARPHONESS</h1>
+    <h1 className="py-12 w-full bg-black text-white mb-8 text-4xl font-bold text-center ">EARPHONES</h1>
 </div>
 {loading? <div className="h-[90vh] flex justify-center items-center">
         <FadeLoader
@@ -66,8 +66,8 @@ export default function Earphone() {
                 <h1 className="text-3xl font-bold text-center my-4">{data.name}</h1>
                 <p className='w-[85%] text-center md:text-left mx-auto md:mx-0 text-gray-500'>{data.description}</p>
                 <button className="mt-4 bg-[#D87D4A] mx-auto md:mx-0 px-6 py-3 hover:bg-[#dd8f62] ease-in-out duration-300 text-[0.9rem] font-bold text-white">
-        SEE PRODUCT
-      </button>
+                  SEE PRODUCT
+                </button>
             </motion.div>
         </motion.div>
     ))}

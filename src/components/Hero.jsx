@@ -35,7 +35,6 @@ export default function Hero() {
   }, [])
   
 
-
   return (
     <div className="mx-auto mb-8  flex flex-col items-center overflow-hidden bg-[#131313]">
       {loading? <div className="h-[90vh] flex justify-center items-center">
@@ -70,7 +69,7 @@ export default function Hero() {
             whileInView="animate" >
                 <img
                   src={BigHeadset}
-                  alt="The bigest headset ever in the pagge"
+                  alt="The bigest headset ever in the page"
                   className="mx-auto mb-[4rem] h-[80vh] md:mx-0 md:w-[100%]"
                 />
         </motion.div>

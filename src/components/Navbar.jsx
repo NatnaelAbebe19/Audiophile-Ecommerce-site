@@ -5,15 +5,23 @@ import { MdOutlineClose } from "react-icons/md";
 import {Link, NavLink} from "react-router-dom";
 import logo from "../assets/images/audiophile.png";
 import SingleDevices from "./SingleDevices";
-export default function Navbar() {
+import Cart from "./Cart";
+export default function Navbar({setShowCart}) {
   const [shownav, setShownav] = useState(false);
+  const [showCarts, setShowCarts] = useState(false); 
+
   function handleClick() {
     setShownav(prev=>!prev);
   }
+
   function handleX() {
     setShownav(false);
   }
- 
+
+  function handleCart(){
+    setShowCarts(prevState=>!prevState);
+  }
+
   return (
     <div className="flex h-[90px] items-center justify-center bg-black ">
       <nav className="flex w-[80%] max-w-[1110px] items-center justify-between py-7 md:border-b-[1px] text-white">
@@ -27,18 +35,21 @@ export default function Navbar() {
             <NavLink to="/earphone" className="text-[13px] font-bold uppercase cursor- hover:text-[#D87D4A] active:text-[#D87D4A] ease-in-out duration-300pointer">earphones</NavLink>
           </ul>
         </div>
-        <AiOutlineShoppingCart size={30} />
+        <div className="relative">
+          <AiOutlineShoppingCart size={30} onClick={handleCart} className="cursor-pointer"/>
+        </div>
         <div
           className={
             shownav
-              ? "absolute left-0 top-[10%] z-[3232] flex w-[100%] mx-auto h-[84vh] flex-col border-r-gray-500 bg-white px-8 duration-700 ease-in-out md:hidden"
+              ? "absolute left-0 top-[10%] z-[3232] flex w-[100%] mx-auto h-[100%] flex-col border-r-gray-500 bg-white px-8 duration-700 ease-in-out md:hidden"
               : "absolute top-[-150%]"
           }
-        >
+        > 
           <div className="mx-auto z-[23222] text-black py-0 my-[-1.8rem] " onClick={handleX}>
             <SingleDevices className="mt-8" lower={2}  />
           </div>  
         </div>
+        {showCarts && <div className="absolute w-[90%] top-[100px] right-0"> <Cart /></div>}
       </nav>
     </div>
   );

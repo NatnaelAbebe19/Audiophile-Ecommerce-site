@@ -47,7 +47,7 @@ export default function Headphones() {
           color={"#D87D4A"}
           loading={loading}
           size={30}
-        />
+        />                    
       </div>:
         <div>
             {Datas.map((data, index)=>(

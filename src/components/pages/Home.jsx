@@ -13,7 +13,7 @@ export default function Home() {
         <Products />
         <Product2 />
         <Product3 />
-        <ManWithHeadset />
+        <ManWithHeadset />  
     </div>
   )
 }
