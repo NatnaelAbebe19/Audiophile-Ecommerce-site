@@ -1,7 +1,10 @@
 import React, {useState, useEffect} from "react";
-import {motion, useInView, useAnimation} from "framer-motion"
+import {motion} from "framer-motion"
 import BigHeadset from "../assets/images/Bitmap.png";
 import FadeLoader from "react-spinners/FadeLoader"; 
+import { useDispatch } from "react-redux";
+import { addToCart } from "./Action";
+
 const fadeInAnimationVariants = {
   initial:{
     opacity: 0,
@@ -26,6 +29,12 @@ const fadeInAnimationVariants2 = {
 }
 export default function Hero() {
   const [loading, setLoading] = useState(false);
+  const dispatch = useDispatch();
+
+  function handleClick(){
+    dispatch(addToCart({name: "XX99", image: BigHeadset, price: 599}));
+  }
+  
 
   useEffect(()=>{
     setLoading(true);
@@ -33,7 +42,6 @@ export default function Hero() {
       setLoading(false);
     }, 1700)
   }, [])
-  
 
   return (
     <div className="mx-auto mb-8  flex flex-col items-center overflow-hidden bg-[#131313]">
@@ -58,7 +66,7 @@ export default function Hero() {
             Experience natural, lifelike audio and exceptional build quality
             made for the passionte music enthsiast.
           </p>
-          <button className="mt-4 bg-[#D87D4A] px-6 py-3 hover:bg-[#dd8f62] ease-in-out duration-300 text-[0.9rem] font-bold text-white">
+          <button onClick={handleClick} className="mt-4 bg-[#D87D4A] px-6 py-3 hover:bg-[#dd8f62] ease-in-out duration-300 text-[0.9rem] font-bold text-white">
             SEE PRODUCT
           </button>
         </motion.div>

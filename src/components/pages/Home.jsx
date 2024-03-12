@@ -6,6 +6,10 @@ import Product2 from '../Product2'
 import Product3 from '../Product3'
 import ManWithHeadset from '../ManWithHeadset'
 export default function Home() {
+  // const [cartList, setCartList] = useState([]);
+
+
+
   return (
     <div>
         <Hero />

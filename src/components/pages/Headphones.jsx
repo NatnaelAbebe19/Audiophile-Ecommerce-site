@@ -1,9 +1,13 @@
 import React, {useState, useEffect} from 'react'
-import Datas from "../datas/headphoneData"
+import Datas from "../datas/data"
 import SingleDevices from '../SingleDevices'
 import Man from "../ManWithHeadset";
 import {motion} from "framer-motion";
 import FadeLoader from "react-spinners/FadeLoader"; 
+import { useDispatch } from 'react-redux';
+import { addToCart } from '../Action';
+
+
 
 const variant1 = {
     initial:{
@@ -30,13 +34,24 @@ const variant2 = {
 
 export default function Headphones() {
     const [loading, setLoading] = useState(false);
+    let filtered = Datas.filter(data=>(data.category === "headphone"));
+    const dispatch = useDispatch();
+    
+    function handleClick(){
+    // filtered.map((items, index) =>{
+      // if(indexs === index){
+        // dispatch(addToCart({name: data.name, image: data.image}));
+      // }
+      // })
+    }
 
     useEffect(()=>{
       setLoading(true);
       setTimeout(()=>{
         setLoading(false);
       }, 1700)
-    }, [])
+    }, []);
+    
   return (
     <div>
         <div>
@@ -50,7 +65,7 @@ export default function Headphones() {
         />                    
       </div>:
         <div>
-            {Datas.map((data, index)=>(
+            {filtered.map((data, index)=>(
                 <motion.div
                 variants={variant2}
                 initial="initial"
@@ -67,7 +82,7 @@ export default function Headphones() {
                         <p className={`tracking-[5px] text-[#D87D4A] ${index === 2? 'block':'hidden'}`}>NEW PRODUCT</p>
                         <h1 className="text-3xl font-bold text-center my-4">{data.name}</h1>
                         <p className='w-[85%] text-center md:text-left mx-auto md:mx-0 text-gray-500'>{data.description}</p>
-                        <button className="mt-4 bg-[#D87D4A] mx-auto md:mx-0 px-6 py-3 hover:bg-[#dd8f62] ease-in-out duration-300 text-[0.9rem] font-bold text-white">
+                        <button onClick={()=>{dispatch(addToCart({name: data.cartName, image: data.image, price: data.price}))}} className="mt-4 bg-[#D87D4A] mx-auto md:mx-0 px-6 py-3 hover:bg-[#dd8f62] ease-in-out duration-300 text-[0.9rem] font-bold text-white">
                 SEE PRODUCT
               </button>
                     </motion.div>

@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react'
-import Datas from "../datas/speakerData"
+import Datas from "../datas/data"
 import SingleDevices from '../SingleDevices'
 import Man from "../ManWithHeadset";
 import {motion} from "framer-motion";
@@ -52,7 +52,7 @@ export default function Speaker() {
         />
       </div>:
     <div>
-        {Datas.map((data, index)=>(
+        {Datas.filter(dataa=>(dataa.category === "speaker")).map((data, index)=>(
         <motion.div
         variants={variant2}
         initial="initial"

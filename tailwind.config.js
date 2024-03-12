@@ -4,7 +4,7 @@ export default {
   theme: {
     extend: {},
     boxShadow: {
-      inset: "inset 0 2px 4px rgba(0, 0, 0, 0.2)",
+      inset: "inset 2px 2px 4px rgba(0, 0, 0, 0.2)",
     },
   },
   variants: {

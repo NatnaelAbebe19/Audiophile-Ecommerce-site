@@ -36,10 +36,10 @@ export default function Navbar({setShowCart}) {
           </ul>
         </div>
         <div className="relative">
-          <AiOutlineShoppingCart size={30} onClick={handleCart} className="cursor-pointer"/>
+          <AiOutlineShoppingCart size={30} onClick={handleCart} className="cursor-pointer ease-in-out duration-300"/>
         </div>
         <div
-          className={
+          className={ 
             shownav
               ? "absolute left-0 top-[10%] z-[3232] flex w-[100%] mx-auto h-[100%] flex-col border-r-gray-500 bg-white px-8 duration-700 ease-in-out md:hidden"
               : "absolute top-[-150%]"
