@@ -6,7 +6,8 @@ const data = [
       image: "src/assets/images/new.jpg", 
       category: "earphone", 
       cartName: "YX1", 
-      price: 321
+      price: 321, 
+      quantity: 0
     },  
     {
         id: "327523395",
@@ -14,8 +15,9 @@ const data = [
         description: "Enjoy your audio almost anywhere and customize it to your specific tastes with the XX59 headphones. The stylish yet durable versatile wireless headset is a brilliant companion at home or on the move.", 
         image: "src/assets/images/XX59.jpg", 
         category: "headphone", 
-      cartName: "XX59", 
-      price: 223
+        cartName: "XX59", 
+        price: 223, 
+        quantity: 1
     },
     {
         id: "230232126",
@@ -23,8 +25,9 @@ const data = [
         description: "As the gold standard fosr headphones, the classic XX99 Mark I offers detailed and accurate audio reproduction for audiophiles, mixing engineers, and music aficionados alike in studios and on the go.", 
         image: "src/assets/images/XX99.jpg", 
         category: "headphone", 
-      cartName: "XX99 I", 
-      price: 499
+        cartName: "XX99 I", 
+        price: 499, 
+        quantity: 1
     },
     {
         id: "325074896",
@@ -32,8 +35,9 @@ const data = [
         description: "The new XX99 Mark II headphones is the pinnacle of pristine audio. It redefines your premium headphone experience by reproducing the balanced depth and precision of studio-quality sound.", 
         image: "src/assets/images/XX99-II.jpg", 
         category: "headphone", 
-      cartName: "XX99 II", 
-      price: 399
+        cartName: "XX99 II", 
+        price: 399, 
+        quantity: 0
     },
     {
         id: "239565781",
@@ -41,8 +45,9 @@ const data = [
         description: "Stream high quality sound wirelessly with minimal to no loss. The ZX7 speaker uses high-end audiophile components that represents the top of the line powered speakers for home or studio use.", 
         image: "src/assets/images/XZ71.jpeg", 
         category: "speaker", 
-      cartName: "ZX7", 
-      price: 599
+        cartName: "ZX7", 
+        price: 599, 
+        quantity: 0
     }, 
     {
         id: "330199613",
@@ -50,8 +55,9 @@ const data = [
         description: "Upgrade your sound system with the all new ZX9 active speaker. It’s a bookshelf speaker system that offers truly wireless connectivity -- creating new possibilities for more pleasing and practical audio setups.", 
         image: "src/assets/images/XZ9.jpeg", 
         category: "speaker", 
-      cartName: "ZX9", 
-      price: 899
+        cartName: "ZX9", 
+        price: 899, 
+        quantity: 0
     }
   ];
   export default data;

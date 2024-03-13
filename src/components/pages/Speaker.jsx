@@ -4,6 +4,8 @@ import SingleDevices from '../SingleDevices'
 import Man from "../ManWithHeadset";
 import {motion} from "framer-motion";
 import FadeLoader from "react-spinners/FadeLoader"; 
+import { useDispatch } from "react-redux";
+import { addToCart } from "../Action";
 
 
 const variant1 = {
@@ -32,7 +34,7 @@ const variant2 = {
 
 export default function Speaker() {
     const [loading, setLoading] = useState(false);
-
+    const dispatch = useDispatch();
     useEffect(()=>{
       setLoading(true);
       setTimeout(()=>{
@@ -69,7 +71,7 @@ export default function Speaker() {
                 <p className={`tracking-[5px] text-[#D87D4A] ${index === 1? 'block':'hidden'}`}>NEW PRODUCT</p>
                 <h1 className="text-3xl font-bold text-center my-4">{data.name}</h1>
                 <p className='w-[85%] text-center md:text-left mx-auto md:mx-0 text-gray-500'>{data.description}</p>
-                <button className="mt-4 bg-[#D87D4A] mx-auto md:mx-0 px-6 py-3 hover:bg-[#dd8f62] ease-in-out duration-300 text-[0.9rem] font-bold text-white">
+                <button onClick={()=>{dispatch(addToCart({name: data.cartName, image: data.image, price: data.price, id:data.id, quantity: data.quantity}))}} className="mt-4 bg-[#D87D4A] mx-auto md:mx-0 px-6 py-3 hover:bg-[#dd8f62] ease-in-out duration-300 text-[0.9rem] font-bold text-white">
         SEE PRODUCT
           </button>
             </motion.div>

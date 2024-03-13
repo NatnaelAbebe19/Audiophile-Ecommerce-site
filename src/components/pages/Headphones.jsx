@@ -20,6 +20,7 @@ const variant1 = {
         transition: {delay: 0.14, duration: 0.35},
     }
 }
+
 const variant2 = {
     initial:{
         opacity: 0,
@@ -36,14 +37,6 @@ export default function Headphones() {
     const [loading, setLoading] = useState(false);
     let filtered = Datas.filter(data=>(data.category === "headphone"));
     const dispatch = useDispatch();
-    
-    function handleClick(){
-    // filtered.map((items, index) =>{
-      // if(indexs === index){
-        // dispatch(addToCart({name: data.name, image: data.image}));
-      // }
-      // })
-    }
 
     useEffect(()=>{
       setLoading(true);
@@ -67,6 +60,7 @@ export default function Headphones() {
         <div>
             {filtered.map((data, index)=>(
                 <motion.div
+                key={data.id}
                 variants={variant2}
                 initial="initial"
                 whileInView={"animate"}
@@ -82,7 +76,7 @@ export default function Headphones() {
                         <p className={`tracking-[5px] text-[#D87D4A] ${index === 2? 'block':'hidden'}`}>NEW PRODUCT</p>
                         <h1 className="text-3xl font-bold text-center my-4">{data.name}</h1>
                         <p className='w-[85%] text-center md:text-left mx-auto md:mx-0 text-gray-500'>{data.description}</p>
-                        <button onClick={()=>{dispatch(addToCart({name: data.cartName, image: data.image, price: data.price}))}} className="mt-4 bg-[#D87D4A] mx-auto md:mx-0 px-6 py-3 hover:bg-[#dd8f62] ease-in-out duration-300 text-[0.9rem] font-bold text-white">
+                        <button onClick={()=>{dispatch(addToCart({name: data.cartName, image: data.image, price: data.price, id:data.id, quantity: data.quantity}))}} className="mt-4 bg-[#D87D4A] mx-auto md:mx-0 px-6 py-3 hover:bg-[#dd8f62] ease-in-out duration-300 text-[0.9rem] font-bold text-white">
                 SEE PRODUCT
               </button>
                     </motion.div>

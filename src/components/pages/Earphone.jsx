@@ -4,6 +4,8 @@ import SingleDevices from '../SingleDevices'
 import Man from "../ManWithHeadset";
 import {motion} from "framer-motion";
 import FadeLoader from "react-spinners/FadeLoader"; 
+import { useDispatch } from 'react-redux';
+import { addToCart } from '../Action';
 
 const variant1 = {
     initial:{
@@ -29,7 +31,7 @@ const variant2 = {
 }
 export default function Earphone() {
     const [loading, setLoading] = useState(false);
-
+    const dispatch = useDispatch();
     useEffect(()=>{
       setLoading(true);
       setTimeout(()=>{
@@ -57,15 +59,15 @@ export default function Earphone() {
             <div className={`mx-auto w-[95%] md:mx-0 md:w-[50%]  md:${index % 2 === 0 ? 'order-1' : 'order-2'}` }>
                 <img src={data.image} alt={data.name} className="w-[100%]"/>
             </div>
-            <motion.div
-            variants={variant1}
+            <motion.div                     
+            variants={variant1}                       
             initial="initial"
             whileInView={"animate"}
             className={`md:w-[50%]  md:${index % 2 === 0 ? 'order-2' : 'order-1'}  flex flex-col items-center md:items-start`}>
                 <p className={`tracking-[5px] text-[#D87D4A]`}>NEW PRODUCT</p>
                 <h1 className="text-3xl font-bold text-center my-4">{data.name}</h1>
                 <p className='w-[85%] text-center md:text-left mx-auto md:mx-0 text-gray-500'>{data.description}</p>
-                <button className="mt-4 bg-[#D87D4A] mx-auto md:mx-0 px-6 py-3 hover:bg-[#dd8f62] ease-in-out duration-300 text-[0.9rem] font-bold text-white">
+                <button onClick={()=>{dispatch(addToCart({name: data.cartName, image:data.image, price:data.price, id:data.id, quantity: data.quantity}))}} className="mt-4 bg-[#D87D4A] mx-auto md:mx-0 px-6 py-3 hover:bg-[#dd8f62] ease-in-out duration-300 text-[0.9rem] font-bold text-white">
                   SEE PRODUCT
                 </button>
             </motion.div>

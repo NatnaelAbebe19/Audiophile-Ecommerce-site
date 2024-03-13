@@ -6,9 +6,11 @@ import {Link, NavLink} from "react-router-dom";
 import logo from "../assets/images/audiophile.png";
 import SingleDevices from "./SingleDevices";
 import Cart from "./Cart";
-export default function Navbar({setShowCart}) {
+import { connect } from 'react-redux';
+  const Navbar = ({cartItems})=>{
   const [shownav, setShownav] = useState(false);
   const [showCarts, setShowCarts] = useState(false); 
+  const sizeOfCart = cartItems.length;
 
   function handleClick() {
     setShownav(prev=>!prev);
@@ -21,7 +23,6 @@ export default function Navbar({setShowCart}) {
   function handleCart(){
     setShowCarts(prevState=>!prevState);
   }
-
   return (
     <div className="flex h-[90px] items-center justify-center bg-black ">
       <nav className="flex w-[80%] max-w-[1110px] items-center justify-between py-7 md:border-b-[1px] text-white">
@@ -35,8 +36,9 @@ export default function Navbar({setShowCart}) {
             <NavLink to="/earphone" className="text-[13px] font-bold uppercase cursor- hover:text-[#D87D4A] active:text-[#D87D4A] ease-in-out duration-300pointer">earphones</NavLink>
           </ul>
         </div>
-        <div className="relative">
-          <AiOutlineShoppingCart size={30} onClick={handleCart} className="cursor-pointer ease-in-out duration-300"/>
+        <div className={`relative`}>
+          {sizeOfCart!==0 && <div className="absolute text-white rounded-full -top-4 left-4 w-8 h-8 bg-blue-500 flex items-center justify-center">{sizeOfCart}</div>}
+          <AiOutlineShoppingCart size={30} onClick={handleCart} className={`cursor-pointer ease-in-out duration-300 `}/>
         </div>
         <div
           className={ 
@@ -54,3 +56,8 @@ export default function Navbar({setShowCart}) {
     </div>
   );
 }
+
+const mapStateToProps = (state) =>({
+  cartItems: state.cartItems
+});
+export default connect(mapStateToProps)(Navbar);

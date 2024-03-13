@@ -22,6 +22,7 @@ export default function SingleDevices(props) {
     <div className="mx-auto mt-[5rem] flex w-full max-w-[1110px] flex-col md:mt-[7rem] md:flex-row">
       {Datas.map((Data, index) => (
         <motion.div 
+        key={Data.id} 
         className={`mx-auto mb-16 ${index==2? `mb-${props.lower}`:''} flex h-[165px] w-[320px]  flex-col items-center rounded-lg bg-[#f2f2f2]`}
         variants={fadeInAnimationVariants}
         initial="initial"

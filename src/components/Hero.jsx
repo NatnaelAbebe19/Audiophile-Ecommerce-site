@@ -32,7 +32,7 @@ export default function Hero() {
   const dispatch = useDispatch();
 
   function handleClick(){
-    dispatch(addToCart({name: "XX99", image: BigHeadset, price: 599}));
+    dispatch(addToCart({name: "XX99", image: BigHeadset, price: 599, id:"222551478"}));
   }
   
 
