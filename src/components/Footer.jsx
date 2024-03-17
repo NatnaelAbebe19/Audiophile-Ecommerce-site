@@ -5,24 +5,35 @@ import {
   AiOutlineTwitter,
   AiOutlineInstagram,
 } from "react-icons/ai";
+import { NavLink } from "react-router-dom";
 
 export default function Footer() {
   return (
     <div className="w-full bg-[#111011] ">
       <footer className="grid max-w-[1110px] pb-8 grid-cols-1 md:grid-cols-2 mx-auto">
         <div className="mx-auto">
-          <img
-            src={audiophile}
-            alt="the logo of the image"
-            className="border-spacing-8 border-t-4 border-t-[#D87D4A] px-4 py-8"
-          />
+          <NavLink to="/">
+            <img
+              src={audiophile}
+              alt="the logo of the image"
+              className="border-spacing-8 border-t-4 border-t-[#D87D4A] px-4 py-8 cursor-pointer"
+            />
+          </NavLink>
         </div>
         <div className="flex flex-col px-4 pb-4 text-center md:flex-row md:pt-[40px]">
           <ul className="justify-between text-white md:flex md:w-[420px] lg:w-[530px]">
-            <li className="pb-4 text-[13px] font-bold uppercase cursor-pointer">Home</li>
-            <li className="pb-4 text-[13px] font-bold uppercase cursor-pointer">Headphones</li>
-            <li className="pb-4 text-[13px] font-bold uppercase cursor-pointer">speakers</li>
-            <li className="pb-4 text-[13px] font-bold uppercase cursor-pointer">earphones</li>
+            <NavLink to="/">
+              <li className="pb-4 text-[13px] font-bold uppercase cursor-pointer active:text-[#D87D4A] focus:text-[#d87d4a]">Home</li>
+            </NavLink>
+            <NavLink to="/headphone">
+              <li className="pb-4 text-[13px] font-bold uppercase cursor-pointer active:text-[#D87D4A] focus:text-[#d87d4a]">Headphones</li>
+            </NavLink>
+            <NavLink to="/speaker">
+              <li className="pb-4 text-[13px] font-bold uppercase cursor-pointer active:text-[#D87D4A] focus:text-[#d87d4a]">speakers</li>
+            </NavLink>
+            <NavLink to="/earphone">
+              <li className="pb-4 text-[13px] font-bold uppercase cursor-pointer active:text-[#D87D4A] focus:text-[#d87d4a]">earphones</li>
+            </NavLink>
           </ul>
         </div>
         <p className="px-4 text-center text-[#6f848d97] md:text-left w-[70%] mx-auto">

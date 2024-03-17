@@ -4,6 +4,7 @@ import BigHeadset from "../assets/images/Bitmap.png";
 import FadeLoader from "react-spinners/FadeLoader"; 
 import { useDispatch } from "react-redux";
 import { addToCart } from "./Action";
+import { NavLink } from "react-router-dom";
 
 const fadeInAnimationVariants = {
   initial:{
@@ -66,9 +67,11 @@ export default function Hero() {
             Experience natural, lifelike audio and exceptional build quality
             made for the passionte music enthsiast.
           </p>
-          <button onClick={handleClick} className="mt-4 bg-[#D87D4A] px-6 py-3 hover:bg-[#dd8f62] ease-in-out duration-300 text-[0.9rem] font-bold text-white">
-            SEE PRODUCT
-          </button>
+          <NavLink to="/headphone">
+            <button className="mt-4 bg-[#D87D4A] px-6 py-3 hover:bg-[#dd8f62] ease-in-out duration-300 text-[0.9rem] font-bold text-white">
+              SEE PRODUCT
+            </button>
+          </NavLink>
         </motion.div>
         <motion.div 
             className="md:w-[50%]"  

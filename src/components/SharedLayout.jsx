@@ -10,7 +10,7 @@ export default function SharedLayout() {
 
   return (
     <div className='overflow-hidden'>
-        <Navbar/>
+        <Navbar />
         <Outlet />    
         <Footer />    
     </div>

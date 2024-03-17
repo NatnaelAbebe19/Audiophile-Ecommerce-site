@@ -1,5 +1,6 @@
 import React from "react";
 import {motion} from "framer-motion"
+import { NavLink } from "react-router-dom";
 
 import Speaker from "../assets/images/ZX9big.png";
 const fadeInAnimationVariants2 = {
@@ -32,9 +33,11 @@ export default function Products() {
           Upgrade to premium speakers that are phenomenally built to deliver
           truly remarkable sound
         </p>
-        <button className="mt-4 bg-[#000] px-6 py-3 text-[0.9rem] font-bold text-white">
-          SEE PRODUCT
-        </button>
+        <NavLink to="./speaker">
+          <button className="mt-4 bg-[#000] px-6 py-3 text-[0.9rem] font-bold text-white">
+            SEE PRODUCT
+          </button>
+        </NavLink>
       </motion.div>
     </div>
   );

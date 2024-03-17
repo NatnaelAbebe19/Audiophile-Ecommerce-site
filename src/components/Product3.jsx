@@ -1,6 +1,7 @@
 import React from "react";
 import YX1 from "../assets/images/YX1.jpg";
 import {motion} from "framer-motion"
+import { NavLink } from "react-router-dom";
 
 const varianted = {
   initial:{
@@ -30,9 +31,11 @@ export default function Product3() {
       </div>
       <div className="flex h-[250px] w-[100%] flex-col items-center justify-center rounded-lg bg-[#F0F1F0] py-8 md:w-[50%]">
         <h1 className="fonts-bold text-2xl text-black md:text-3xl">YX1 Earphones</h1>
-        <button className="mt-4 border border-stone-950  hover:bg-[#000] hover:text-white ease-in-out duration-300 bg-transparent px-6 py-3 text-[0.9rem] font-bold text-black">
-          SEE PRODUCT
-        </button>
+        <NavLink to="./earphone">
+          <button className="mt-4 border border-stone-950  hover:bg-[#000] hover:text-white ease-in-out duration-300 bg-transparent px-6 py-3 text-[0.9rem] font-bold text-black">
+            SEE PRODUCT
+          </button>
+        </NavLink>
       </div>
     </motion.div>
   );

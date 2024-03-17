@@ -2,7 +2,7 @@ import React from "react";
 import Datas from "./datas/devices";
 import { MdKeyboardArrowRight } from "react-icons/md";
 import {motion, useInView, useAnimation} from "framer-motion"
-import {NavLink} from "react-router-dom"
+import {NavLink, Link} from "react-router-dom"
 
 const fadeInAnimationVariants = {
   initial:{
@@ -35,14 +35,14 @@ export default function SingleDevices(props) {
             className={` mx-auto mt-[-3rem] `}
           />
           <h1 className="py-5 text-[20px] font-bold uppercase">{Data.name}</h1>
-          <NavLink to={`${Data.direct}`}>
+          <Link to={`/${Data.direct}`}>
             <h2 className="flex items-center text-gray-600 hover:text-[orange] ease-in-out duration-300">
               Shop
               <span className="text-2xl text-[orange]">
                 <MdKeyboardArrowRight />
               </span>
             </h2>
-          </NavLink>  
+          </Link>  
         </motion.div>
       ))}
     </div>

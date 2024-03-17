@@ -1,6 +1,8 @@
 import React from "react";
 import ZX7 from "../assets/images/ZX7.jpeg";
 import {motion} from "framer-motion"
+import { NavLink } from "react-router-dom";
+
 const fadeInAnimationVariants2 = {
   initial:{
     opacity: 0,
@@ -23,9 +25,11 @@ export default function Product2() {
         <h1 className="fonts-bold text-2xl text-black md:text-3xl">
           ZX7 Speaker
         </h1>
-        <button className="mt-4 border hover:bg-[#000] hover:text-white ease-in-out duration-300 border-stone-950 bg-transparent px-6 py-3 text-[0.9rem] font-bold text-black">
-          SEE PRODUCT
-        </button>
+        <NavLink to="./speaker">
+          <button className="mt-4 border hover:bg-[#000] hover:text-white ease-in-out duration-300 border-stone-950 bg-transparent px-6 py-3 text-[0.9rem] font-bold text-black">
+            SEE PRODUCT
+          </button>
+        </NavLink>
       </div>
       <div className="h-[300px] w-[100%] max-w-[1110px] ">
         <img

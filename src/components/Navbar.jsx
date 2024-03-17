@@ -23,8 +23,13 @@ import { connect } from 'react-redux';
   function handleCart(){
     setShowCarts(prevState=>!prevState);
   }
+
+  function handleBody(){
+    // setShowCarts();
+  }
+
   return (
-    <div className="flex h-[90px] items-center justify-center bg-black ">
+    <div onClick={handleBody} className="flex h-[90px] items-center justify-center bg-black ">
       <nav className="flex w-[80%] max-w-[1110px] items-center justify-between py-7 md:border-b-[1px] text-white">
         <FaBars size={25} className="md:hidden cursor-pointer" onClick={handleClick} />
         <Link to="/"><img src={logo} alt="The logo of the image" /></Link>
@@ -51,7 +56,7 @@ import { connect } from 'react-redux';
             <SingleDevices className="mt-8" lower={2}  />
           </div>  
         </div>
-        {showCarts && <div className="absolute w-[90%] top-[100px] right-0"> <Cart /></div>}
+        {showCarts && <div className="absolute w-[90%] top-[100px] right-0"> <Cart setShowCarts={setShowCarts}/></div>}
       </nav>
     </div>
   );
