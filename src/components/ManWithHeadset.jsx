@@ -1,6 +1,7 @@
 import React from "react";
 import manWith from "../assets/images/manWith.jpg";
 import {motion} from "framer-motion"
+
 const variante2 = {
   initial:{
     opacity: 0,
@@ -12,6 +13,7 @@ const variante2 = {
     transition: {delay: 0.10, duration: 0.35}
   }
 }
+
 const variante1 = {
   initial:{
     opacity: 0,
@@ -36,7 +38,7 @@ export default function ManWithHeadset() {
           BRINGING YOU THE <br />
           <span className="text-[#D47B4F]">BEST</span> AUDIO GEAR
         </h1>
-        <p className="w-[80%] text-center font-medium leading-6 text-gray-500 md:text-left lg:w-[%]">
+        <p className="w-[85%] text-center font-medium leading-6 text-gray-500 md:text-left lg:w-[%]">
           Located at the heart of New York City, Audiophile is the premier store
           for high end headphones, earphones, speakers, and audio accessories.
           We have a large showroom and luxury demonstration rooms available for
