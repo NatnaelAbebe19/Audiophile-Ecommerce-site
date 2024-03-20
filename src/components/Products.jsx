@@ -34,7 +34,7 @@ export default function Products() {
           truly remarkable sound
         </p>
         <NavLink to="./speaker">
-          <button className="mt-4 bg-[#000] px-6 py-3 text-[0.9rem] font-bold text-white">
+          <button className="mt-4 bg-[#000] px-6 py-3 text-[0.9rem] font-bold text-white hover:bg-slate-900 ease-in-out duration-500">
             SEE PRODUCT
           </button>
         </NavLink>

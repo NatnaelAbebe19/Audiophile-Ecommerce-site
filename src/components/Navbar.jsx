@@ -29,10 +29,10 @@ import { connect } from 'react-redux';
   }
 
   return (
-    <div onClick={handleBody} className="flex h-[90px] items-center justify-center bg-black ">
+    <div onClick={handleBody} className="flex h-[90px] items-center justify-center bg-[#000]">
       <nav className="flex w-[80%] max-w-[1110px] items-center justify-between py-7 md:border-b-[1px] text-white">
         <FaBars size={25} className="md:hidden cursor-pointer" onClick={handleClick} />
-        <Link to="/"><img src={logo} alt="The logo of the image" /></Link>
+        <Link to="/"><img src={logo} className="hover:scale-110 ease-in-out duration-500" alt="The logo of the image" /></Link>
         <div>
           <ul className="hidden justify-between md:flex md:w-[320px] lg:w-[430px]">
             <NavLink to="/" className="text-[13px] font-bold uppercase cursor-pointer hover:text-[#D87D4A] active:text-[#D87D4A] ease-in-out duration-300 hover:scale-105">Home</NavLink>
@@ -43,7 +43,7 @@ import { connect } from 'react-redux';
         </div>
         <div className={`relative`}>
           {sizeOfCart!==0 && <div className="absolute text-white rounded-full -top-4 left-4 w-8 h-8 bg-blue-500 flex items-center justify-center">{sizeOfCart}</div>}
-          <AiOutlineShoppingCart size={30} onClick={handleCart} className={`cursor-pointer ease-in-out duration-300 `}/>
+          <AiOutlineShoppingCart size={30} onClick={handleCart} className={`cursor-pointer hover:scale-110 ease-in-out duration-300 `}/>
         </div>
         <div
           className={ 
@@ -65,4 +65,5 @@ import { connect } from 'react-redux';
 const mapStateToProps = (state) =>({
   cartItems: state.cartItems
 });
+
 export default connect(mapStateToProps)(Navbar);

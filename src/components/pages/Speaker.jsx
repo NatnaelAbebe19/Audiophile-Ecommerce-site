@@ -69,6 +69,7 @@ export default function Speaker() {
     <div>
         {Datas.filter(dataa=>(dataa.category === "speaker")).map((data, index)=>(
         <motion.div
+        key={data.id}
         variants={variant2}
         initial="initial"
         whileInView={"animate"}

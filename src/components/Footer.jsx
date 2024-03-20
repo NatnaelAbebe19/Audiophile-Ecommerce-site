@@ -32,7 +32,7 @@ export default function Footer() {
             <img
               src={audiophile}
               alt="the logo of the image"
-              className="border-spacing-8 border-t-4 border-t-[#D87D4A] px-4 py-8 cursor-pointer "
+              className="border-spacing-8 border-t-4 border-t-[#D87D4A] px-4 py-8 cursor-pointer"
             />
           </NavLink>
         </div>
