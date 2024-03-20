@@ -8,11 +8,10 @@ import { NavLink } from 'react-router-dom';
 const Cart = ({cartItems, addToCart,removeFromCart, removeAllItemFromCart, removeSingle , setShowCarts}) =>{
     const added = cartItems.length;
     let total = 0;
-    let count = 0;
+    // let count = 0;
 
     const handleRemove = ()=>{
         removeAllItemFromCart();
-        // setShowCarts(false);
     }
 
     const handleRemoveFromCart = (items)=>{
