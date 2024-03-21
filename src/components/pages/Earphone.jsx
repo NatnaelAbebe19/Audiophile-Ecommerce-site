@@ -66,6 +66,7 @@ export default function Earphone() {
 <div>
     {Datas.filter(dataa=>dataa.category === "earphone").map((data, index)=>(
         <motion.div
+        key={data.id}
         variants={variant2}
         initial="initial"
         whileInView={"animate"}
