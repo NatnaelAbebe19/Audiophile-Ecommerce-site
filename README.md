@@ -1,7 +1,7 @@
 
-# Audiophile E-commerce Website
+# Audiophile E-commerce Website clone
 
-Welcome to our Audiophile Ecommerce Site! Our website is dedicated to providing audiophiles and music enthusiasts with a wide selection of high-quality earphones, headphones, speakers, and other related audio devices.
+Welcome to our Audiophile Ecommerce Site! this website is dedicated to providing audiophiles and music enthusiasts with a wide selection of high-quality earphones, headphones, speakers, and other related audio devices.
 
 At our ecommerce store, you'll find a curated collection of top-notch audio products from renowned brands, carefully chosen to deliver exceptional sound reproduction and an immersive listening experience. Whether you're a casual listener or a dedicated audiophile, we have the perfect audio gear to meet your needs and elevate your music enjoyment.
 
