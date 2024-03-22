@@ -1,19 +1,19 @@
 const data = [
   {
     name: "Headphones",
-    imag: "public/headset.png",
+    imag: "/headset.png",
     direct:'headphone', 
     id: '001'
   },
   {
     name: "Speakers",
-    imag: "public/speaker.png",
+    imag: "/speaker.png",
     direct:"speaker", 
     id: '002'
   },
   {
     name: "Earphones",
-    imag: "public/earphone.png",
+    imag: "/earphone.png",
     direct: "earphone", 
     id: '003'
   },
