@@ -21,8 +21,7 @@ At our ecommerce store, you'll find a curated collection of top-notch audio prod
 - [Development Workflow](#DevelopmentWorkflow)
 - [Contributing](#Contributing)
 - [Contact](#Contact)
-
-
+- [Acknowledgement](#Acknowledgement)
 
 # Hi, I'm Natnael! 👋
 
@@ -73,17 +72,13 @@ cd audiophile-ecommerce-website
 ```bash
 npm install
 ```
-4. Set up environment variables:
 
-- Create a `.env` file in the project root directory.
-- Define the required environment variables in the `.env` file. For example, if you need an API key for a payment gateway, you can set `REACT_APP_PAYMENT_API_KEY=your-api-key` in the `.env` file.
-
-5. Start the development server:
+4. Start the development server:
 
 ```bash
 npm run dev
 ```
-6. Open your web browser and visit `http://localhost:3000` to access the audiophile ecommerce website.
+5. Open your web browser and visit `http://localhost:5173` to access the audiophile ecommerce website.
 
 ## Development Workflow
 
