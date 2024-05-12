@@ -58,7 +58,9 @@ export default function Hero() {
         variants={fadeInAnimationVariants2}
         initial="initial"
         whileInView="animate"
-        className="absolute top-[35%] mx-auto flex max-w-[80%] flex-col items-center text-center text-white md:static md:w-[50%] md:items-start md:text-left">
+        className="absolute top-[35%] mx-auto flex max-w-[80%] flex-col items-center text-center text-white md:static md:w-[50%] md:items-start md:text-left"
+        viewport={{once: true}}
+        >
           <p className="tracking-[5px] text-gray-400">NEW PRODUCT</p>
           <h1 className="mb-4 mt-2 text-3xl font-bold md:text-4xl">
             XX99 MARK II HEADPHONE
@@ -77,7 +79,9 @@ export default function Hero() {
             className="md:w-[50%]"  
             variants={fadeInAnimationVariants}
             initial="initial"
-            whileInView="animate" >
+            whileInView="animate" 
+            viewport={{once: true}}
+            >
                 <img
                   src={BigHeadset}
                   alt="The bigest headset ever in the page"

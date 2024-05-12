@@ -73,7 +73,9 @@ export default function Speaker() {
         variants={variant2}
         initial="initial"
         whileInView={"animate"}
-        className={`max-w-[1110px] mx-auto flex flex-col md:flex-row justify-center  gap-12  mb-12 items-center`}>
+        className={`max-w-[1110px] mx-auto flex flex-col md:flex-row justify-center  gap-12  mb-12 items-center`}
+        viewport={{once: true}}
+        >
             <div className={`mx-auto w-[95%] md:mx-0 md:w-[50%]  md:${index % 2 === 0 ? 'order-1' : 'order-2'}` }>
                 <div className="absolute bg-[#D87D4A] text-white px-8 text-xl">${data.price}</div>
                 <img src={data.image} alt={data.name} className="w-[100%]"/>
@@ -82,7 +84,9 @@ export default function Speaker() {
             variants={variant1}
             initial="initial"
             whileInView={"animate"}
-            className={`md:w-[50%]  md:${index % 2 === 0 ? 'order-2' : 'order-1'}  flex flex-col items-center md:items-start`}>
+            className={`md:w-[50%]  md:${index % 2 === 0 ? 'order-2' : 'order-1'}  flex flex-col items-center md:items-start`}
+            viewport={{once: true}}
+            >
                 <p className={`tracking-[5px] text-[#D87D4A] ${index === 1? 'block':'hidden'}`}>NEW PRODUCT</p>
                 <h1 className="text-3xl font-bold text-center my-4">{data.name}</h1>
                 <p className='w-[85%] text-center md:text-left mx-auto md:mx-0 text-gray-500'>{data.description}</p>

@@ -20,7 +20,8 @@ export default function Product2() {
       variants={fadeInAnimationVariants2}
       initial="initial"
       whileInView='animate' 
-    className="relative mx-auto mb-12 w-[90%] max-w-[1110px] overflow-hidden rounded-lg">
+      className="relative mx-auto mb-12 w-[90%] max-w-[1110px] overflow-hidden rounded-lg"
+      viewport={{once: true}}>
       <div className="jsutify-center absolute left-4 top-[33%] flex flex-col items-center md:left-[10%]">
         <h1 className="fonts-bold text-2xl text-black md:text-3xl">
           ZX7 Speaker

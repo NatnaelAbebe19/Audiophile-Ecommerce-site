@@ -24,7 +24,9 @@ export default function Products() {
        variants={fadeInAnimationVariants2}
        initial="initial"
        whileInView="animate"
-        className="flex flex-col items-center justify-center md:items-start">
+        className="flex flex-col items-center justify-center md:items-start"
+        viewport={{once: true}}
+        >
         <h1 className=" mb-4 mt-2 text-4xl font-bold text-white md:text-4xl">
           ZX9 <br />
           SPEAKER

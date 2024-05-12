@@ -33,7 +33,9 @@ export default function ManWithHeadset() {
       variants={variante1}
       initial = "initial"
       whileInView={"animate"}
-      className="order-2 flex flex-grow flex-col items-center justify-center px-12 md:order-1  md:w-[50%] md:items-start">
+      className="order-2 flex flex-grow flex-col items-center justify-center px-12 md:order-1  md:w-[50%] md:items-start"
+      viewport={{once: true}}
+      >
         <h1 className="pb-8 text-center text-2xl font-bold md:text-left md:text-3xl lg:text-4xl ">
           BRINGING YOU THE <br />
           <span className="text-[#D47B4F]">BEST</span> AUDIO GEAR
@@ -51,7 +53,9 @@ export default function ManWithHeadset() {
       variants={variante2}
       initial = "initial"
       whileInView={"animate"}
-      className="order-1 mx-auto mb-8 h-[350px] w-[90%] overflow-hidden rounded-lg md:order-2 md:h-auto md:w-[50%]">
+      className="order-1 mx-auto mb-8 h-[350px] w-[90%] overflow-hidden rounded-lg md:order-2 md:h-auto md:w-[50%]"
+      viewport={{once: true}}
+      >
         <img
           src={manWith}
           alt="A man with a headset"

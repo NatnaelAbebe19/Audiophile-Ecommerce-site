@@ -21,7 +21,9 @@ export default function Product3() {
     variants={varianted}
     initial="initial"
     whileInView={"animate"}
-    className="mx-auto mb-[6rem] flex w-[90%] max-w-[1110px] flex-col gap-8 md:flex-row md:gap-4">
+    className="mx-auto mb-[6rem] flex w-[90%] max-w-[1110px] flex-col gap-8 md:flex-row md:gap-4"
+    viewport={{once: true}}
+    >
       <div className="h-[250px] w-[100%] md:w-[50%]">
         <img
           src={YX1}
